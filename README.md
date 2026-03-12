@@ -1,5 +1,5 @@
 # Taller-de-Grado-Multimedial-Seccion-1-Lunes
-##Seccion1-Jueves
+## Seccion1-Jueves
 
 
 #### Ejercicio 1 Semana 1
