@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!-- Indica al navegador que este documento usa HTML5 -->
 
-<html>
+<html lang="es">
 <!-- Inicio del documento HTML -->
 
 <head>
@@ -20,19 +20,19 @@ body{
 /* "body" se refiere a todo el contenido visible de la página */
 
   background-color: #7C00B3;
-  /* Define que el fondo de toda la página sea blanco */
+  /* Define el color de fondo de toda la página */
 
   color: #9DA31D;
-  /* Define que el color del texto sea negro */
-
+  /* Define el color del texto */
+ 
   margin: 0;
   /* Elimina los márgenes que los navegadores agregan por defecto */
 
-  height: 100vh;
-  /* Hace que el alto del cuerpo sea igual al 100% de la altura de la pantalla */
+  min-height: 100vh;
+  /* Hace que el alto mínimo sea igual a la pantalla, pero permite crecer si hay más contenido */
 
   display: flex;
-  /* Activa el sistema Flexbox para organizar y centrar elementos */
+  /* Activa el sistema Flexbox para organizar elementos */
 
   justify-content: center;
   /* Centra el contenido horizontalmente */
@@ -42,24 +42,70 @@ body{
 
   font-family: Arial, sans-serif;
   /* Define la tipografía del texto */
-
-  font-size: 400px;
-  /* Define el tamaño grande del texto */
-
 }
-/* Fin de las reglas de estilo del body */
+
+/* Contenedor principal */
+.contenedor{
+/* Agrupa todos los elementos para ordenarlos mejor */
+
+  display: flex;
+  /* Activa Flexbox dentro del contenedor */
+
+  flex-direction: column;
+  /* Hace que los elementos se ordenen de arriba hacia abajo */
+
+  align-items: center;
+  /* Centra los elementos horizontalmente */
+
+  gap: 30px;
+  /* Define el espacio entre cada elemento (mejor que usar <br>) */
+}
+
+/* Estilo del título */
+h1{
+
+  font-size: 120px;
+  /* Tamaño grande del título (antes estaba en body y rompía todo) */
+
+  margin: 0;
+  /* Elimina espacio extra alrededor del título */
+}
+
+/* Fin de los estilos */
 
 </style>
-<!-- Fin de la sección de estilos -->
 
 </head>
 <!-- Fin de la sección head -->
 
 <body>
 <!-- Inicio del contenido visible de la página -->
-  
-MULTIJUEVES
-<!-- Texto que aparece en el centro de la pantalla -->
+
+<div class="contenedor">
+<!-- Contenedor que agrupa todo el contenido -->
+
+  <h1>MULTIJUEVES</h1>
+  <!-- Título principal de la página -->
+
+  <h1>SITIO</h1>
+  <img src="img/Portada.jpeg" alt="Portada" width="300">
+  <!-- Imagen principal -->
+
+  <h1>Mi obra</h1>
+ <p>Luffylda Laferte</p>
+  <a href="obra.html">
+  <!-- Enlace a otra página -->
+    <img src="img/inicio.jpeg" alt="Obra" width="300">
+    <!-- Imagen que funciona como botón -->
+  </a>
+
+  <a href="contacto.html">
+  <!-- Enlace a la página de contacto -->
+    <img src="img/contacto.jpeg" alt="Contacto" width="300">
+    <!-- Imagen de contacto -->
+  </a>
+
+</div>
 
 </body>
 <!-- Fin del contenido visible -->
