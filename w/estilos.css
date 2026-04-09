@@ -1,0 +1,133 @@
+/* estilos.css */
+
+/* 1. RESET Y CONFIGURACIÓN BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #7C00B3;
+  color: #9DA31D;
+  font-family: Arial, sans-serif;
+  /* Quitamos el flex del body para que los elementos fluyan hacia abajo normalmente */
+}
+
+/* 2. LA NAVBAR (Sticker en el vidrio) */
+nav {
+    position: -webkit-sticky; /* Soporte para Safari */
+    position: sticky;        /* La magia: actúa como bloque normal, pero se pega al llegar al tope */
+    top: 0;                  /* Se pegará justo en el borde superior (0 píxeles) */
+    width: 100%;
+    background: #BE66E3;
+    padding: 15px;
+    z-index: 1000;           /* Para que pase por encima de las imágenes al bajar */
+    text-align: center;
+}
+.nav-link {
+    text-decoration: none; /* Quita el subrayado azul feo */
+    color: #E8E83F;        /* Tu color amarillo/verde */
+    font-weight: bold;
+    margin: 0 15px;        /* ¡ESTO los separa! 15px a la izquierda y 15px a la derecha */
+    font-size: 18px;
+    transition: 0.3s;      /* Suaviza el cambio de color */
+}
+
+.nav-link:hover {
+    color: white;          /* Cambia a blanco cuando pasas el mouse */
+}
+
+/* 3. EL HEADER (El título gigante al principio) */
+header {
+  height: 100vh; /* Ocupa toda la pantalla al inicio */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #BE66E3;
+  color: #D1D18A;
+  /* Como la navbar es fixed, el header empieza desde arriba. 
+     No necesita margen si queremos que la navbar flote sobre él */
+}
+
+header h1 {
+  font-size: 120px;
+  margin: 0;
+}
+
+/* 4. EL CONTENEDOR DE CONTENIDO */
+.contenedor {
+  display: flex;
+  flex-direction: column; /* Elementos uno abajo del otro */
+  align-items: center;
+  gap: 50px; /* Espaciado automático entre imágenes y textos */
+  padding: 100px 20px; /* Espacio arriba y abajo para que no choque con el header */
+}
+
+.contenedor h1 {
+    font-size: 60px;
+}
+
+.contenedor-grilla {
+    display: flex;
+    flex-wrap: wrap;       /* Permite que los elementos salten de línea */
+    justify-content: center; /* Centra las cajas en la fila */
+    gap: 20px;            /* Espacio uniforme entre cajas (horizontal y vertical) */
+    padding: 40px 20px;
+    max-width: 1200px;    /* Para que la grilla no se desparrame en pantallas gigantes */
+    margin: 0 auto;       /* Centra todo el bloque de la grilla */
+}
+
+.caja {
+    background-color: #BE66E3; /* Fondo morado como tu barra */
+    width: calc(33.33% - 20px); /* El truco para que quepan exactamente 3 por fila */
+    min-width: 250px;           /* Para que en celulares no se vean diminutas */
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+}
+
+.caja img {
+    width: 100%;           /* La imagen ocupa todo el ancho de la caja */
+    height: 200px;         /* Altura fija para que todas se vean iguales */
+    object-fit:contain;     /* Recorta la imagen para que no se estire feo con cover, con contain es para que quepa en la altura/anchura fija*/
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.caja h3 {
+    color: #E8E83F;       /* El amarillo/verde de tu logo */
+    font-size: 22px;
+    margin-bottom: 8px;   /* Separa el título del párrafo */
+    text-transform: uppercase; /* Lo pone en mayúsculas automáticamente */
+}
+
+.caja p {
+    color: #ffffff;       /* Blanco para que resalte sobre el morado */
+    font-size: 14px;
+    line-height: 1.4;     /* Da aire entre líneas de texto */
+    font-style: italic;   /* Le da un toque artístico */
+}
+
+
+
+/* 5. BOTONES Y OTROS */
+.boton {
+  background-color: blue;
+  color: white;
+  padding: 15px;
+  width: 150px;
+  text-align: center;
+  transition: 0.3s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.boton:hover {
+  background-color: red;
+}
+
+img {
+    border-radius: 10px; /* Un toque estético */
+}
